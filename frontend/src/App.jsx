@@ -17,14 +17,18 @@ function App() {
     setLoading(true);
     const formData = new FormData();
     formData.append('file', file);
+try {
+  const API_URL = import.meta.env.VITE_API_URL;
 
-    try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-      const response = await axios.post(`${apiUrl}/import`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+  const response = await axios.post(
+    `${API_URL}/api/import`,
+    formData,
+    {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    }
+  );
       setReport(response.data.report);
       setImportedCount(response.data.importedCount);
     } catch (error) {

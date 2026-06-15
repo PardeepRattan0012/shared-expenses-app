@@ -33,7 +33,7 @@ A modern, full-stack application to manage shared expenses, handling complex spl
 ```bash
 cd backend
 npm install
-# Create a .env file based on the template
+
 npm run dev
 ```
 
@@ -41,6 +41,6 @@ npm run dev
 ```bash
 cd frontend
 npm install
-# Create a .env file with VITE_API_URL=http://localhost:5000/api
+
 npm run dev
 ```

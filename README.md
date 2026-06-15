@@ -44,3 +44,5 @@ npm install
 
 npm run dev
 ```
+## AI Tools Used
+- ChatGPT (for code assistance, debugging and documentation)
